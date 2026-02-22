@@ -12,8 +12,6 @@ public class ArtistaRepositorio {
     private List<Artista> artistas = new ArrayList<>();
     private int contadorId = 1;
 
-
-    // Guardar
     public Artista guardar(Artista artista){
         artista.setArtistaId((long) contadorId);
         contadorId++;
@@ -22,8 +20,6 @@ public class ArtistaRepositorio {
         return artista;
     }
 
-
-    // Obtener todos
     public List<Artista> obtenerTodos(){return artistas;}
 
 
@@ -40,8 +36,6 @@ public class ArtistaRepositorio {
         return null;
     }
 
-
-    // Eliminar
     public boolean eliminar(Long id){
         Artista artista = obtenerPorId(id);
 
@@ -53,7 +47,6 @@ public class ArtistaRepositorio {
         return false;
     }
 
-    // Actualizar
     public Artista actualizar(Long id, Artista artistaActualizado){
         Artista artista = obtenerPorId(id);
 
